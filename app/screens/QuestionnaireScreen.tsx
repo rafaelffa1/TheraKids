@@ -54,16 +54,14 @@ export default function QuestionnaireScreen({ navigation }) {
 
   const formatAnswersForPrompt = (data) => {
     let formattedText = `
-      ChatGPT, faça um Teste Neuropsicológico para Autismo, TDAH e TOD e me forneça um diagnóstico avaliativo do paciente de acordo com as perguntas e respostas dadas.
-
+      ChatGPT, faça um Teste Neuropsicológico para Autismo(nível 1, nível 2 ou nível 3), TDAH e TOD e me forneça um diagnóstico avaliativo do paciente de acordo com as perguntas e respostas dadas.
+      OBS:Quanto mais medicamentos o paciente tomar, maior será o grau de autismo.
       Formate a resposta no seguinte modelo JSON:
-
       {
         "NomePaciente": "Nome do Paciente",
         "avaliacaoNeuropsicologica": "Resumo detalhado da avaliação neuropsicológica do paciente com base nas respostas.",
         "diagnosticoAvaliativo": "Diagnóstico avaliativo final, incluindo possíveis indicações ou recomendações."
       }
-
       Não inclua as perguntas e respostas novamente, apenas a avaliação e diagnóstico baseado nas respostas fornecidas.
     `;
     formattedText += `Nome do Paciente: ${data.patientName}\n`;

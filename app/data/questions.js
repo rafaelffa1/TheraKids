@@ -106,6 +106,56 @@ const sections = [
           "Apresenta dificuldade em perceber dor ou temperatura de forma adequada?",
         ],
       },
+      {
+        title: "Comunicação Verbal",
+        data: [
+          "O paciente emite sons como grunhidos, gemidos ou murmúrios?",
+          "Faz algum tipo de vocalização espontânea durante o dia?",
+          "Reage ao ouvir seu nome sendo chamado?",
+          "Demonstra alguma resposta a sons altos ou inesperados?",
+          "Tenta imitar sons ou vocalizações de outras pessoas?",
+          "Reage diferentemente a vozes familiares e desconhecidas?",
+          "Demonstra preferência por certos tipos de sons, como músicas ou ruídos específicos?",
+          "Aparenta não perceber ou ignorar sons ao seu redor?",
+          "Demonstra desconforto ou irritação com certos sons ou ruídos?",
+        ],
+      },
+      {
+        title: "Uso de medicamentos",
+        data: [
+          "Risperidona",
+          "Aristab",
+          "Canabidiol",
+          "Aripiprazol",
+          "Neoleptil",
+          "Melatonina",
+          "Fluoxetina",
+          "Ritalina",
+          "Depakene",
+          "Carbamazepina",
+          "Outros",
+        ],
+      },
+      {
+        title: "Desempenho Ocupacional Interativo",
+        data: [
+          "O paciente consegue manipular objetos de uso diário, como colher, copo ou brinquedos simples?",
+          "Demonstra resistência extrema ao toque ou a diferentes texturas?",
+          "Participa, mesmo com ajuda, de atividades motoras como encaixar peças ou empilhar objetos?",
+          "Tolera mudanças na posição do corpo, como ser colocado sentado ou de pé, sem grande irritação?",
+          "Demonstra interesse ou curiosidade por atividades sensoriais, como tocar água, areia ou massas moldáveis?",
+        ],
+      },
+      {
+        title: "Comportamento Nutricional",
+        data: [
+          "O paciente rejeita alimentos com determinadas texturas (moles, crocantes, pastosos)?",
+          "Demonstra recusa extrema a novos alimentos, independentemente do sabor ou cor?",
+          "Aceita uma variedade muito limitada de alimentos (menos de 10 opções)?",
+          "Apresenta reações adversas, como náusea ou vômito, ao experimentar novos alimentos?",
+          "Demonstra preferência exclusiva por determinados grupos alimentares, como apenas carboidratos ou laticínios?",
+        ],
+      },
 
   ];
   

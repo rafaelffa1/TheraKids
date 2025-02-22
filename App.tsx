@@ -8,6 +8,8 @@ import { Button, View, Text } from 'react-native';
 
 import QuestionnaireScreen from './app/screens/QuestionnaireScreen';
 import EvaluationDiagnostic from './app/screens/EvaluationDiagnostic';
+import CreateTerapeuticPlan from './app/screens/CreateTerapeuticPlan';
+import TerapeuticPlanResult from './app/screens/terapeuticPlanResult';
 
 const HomeStack = createNativeStackNavigator();
 const Tab = createMaterialBottomTabNavigator();
@@ -97,7 +99,13 @@ function RootStackNavigator() {
   return (
     <RootStack.Navigator>
       <RootStack.Screen name="Tabs" component={TabNavigator} options={{ headerShown: false }} />
-      <RootStack.Screen name="Modal" component={ModalScreen}
+      <RootStack.Screen name="TerapeuticPlan" component={CreateTerapeuticPlan}
+        options={{
+          presentation: 'modal',
+          animation: 'slide_from_bottom',
+          headerShown: false
+        }} />
+      <RootStack.Screen name="TerapeuticPlanResult" component={TerapeuticPlanResult}
         options={{
           presentation: 'modal',
           animation: 'slide_from_bottom',

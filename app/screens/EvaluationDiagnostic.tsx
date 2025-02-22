@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, ScrollView, StyleSheet } from 'react-native';
+import { View, Text, ScrollView, StyleSheet, Button } from 'react-native';
 import { useRoute } from '@react-navigation/native';
 
 export default function EvaluationDiagnostic({ navigation }) {
@@ -10,16 +10,23 @@ export default function EvaluationDiagnostic({ navigation }) {
     const cleanedString = planoTerapeutico.replace(/^```json/, '').replace(/```$/, '').trim();
     const avaliationObject = JSON.parse(cleanedString)
 
+    const goToTerapeuticPlan = async () => {
+        navigation.navigate("TerapeuticPlan", {data: avaliationObject})
+    };
+
     return (
-        <ScrollView contentContainerStyle={styles.container}>
-            <Text style={styles.title}>Diagnóstico avaliativo</Text>
-            <Text style={styles.sectionTitle}>Nome do Paciente:</Text>
-            <Text style={styles.content}>{avaliationObject.NomePaciente}</Text>
-            <Text style={styles.sectionTitle}>Avaliação Neuropsicológica:</Text>
-            <Text style={styles.content}>{avaliationObject.avaliacaoNeuropsicologica}</Text>
-            <Text style={styles.sectionTitle}>Diagnóstico Avaliativo:</Text>
-            <Text style={styles.content}>{avaliationObject.diagnosticoAvaliativo}</Text>
-        </ScrollView>
+        <>
+            <ScrollView contentContainerStyle={styles.container}>
+                <Text style={styles.title}>Diagnóstico avaliativo</Text>
+                <Text style={styles.sectionTitle}>Nome do Paciente:</Text>
+                <Text style={styles.content}>{avaliationObject.NomePaciente}</Text>
+                <Text style={styles.sectionTitle}>Avaliação Neuropsicológica:</Text>
+                <Text style={styles.content}>{avaliationObject.avaliacaoNeuropsicologica}</Text>
+                <Text style={styles.sectionTitle}>Diagnóstico Avaliativo:</Text>
+                <Text style={styles.content}>{avaliationObject.diagnosticoAvaliativo}</Text>
+            </ScrollView>
+            <Button title="Criar Plano Terapeutico" onPress={goToTerapeuticPlan} />
+        </>
     );
 }
 
