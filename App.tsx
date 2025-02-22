@@ -9,7 +9,7 @@ import { Button, View, Text } from 'react-native';
 import QuestionnaireScreen from './app/screens/QuestionnaireScreen';
 import EvaluationDiagnostic from './app/screens/EvaluationDiagnostic';
 import CreateTerapeuticPlan from './app/screens/CreateTerapeuticPlan';
-import TerapeuticPlanResult from './app/screens/terapeuticPlanResult';
+import TerapeuticPlanResult from './app/screens/TerapeuticPlanResult';
 
 const HomeStack = createNativeStackNavigator();
 const Tab = createMaterialBottomTabNavigator();
