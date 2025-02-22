@@ -49,7 +49,8 @@ export default function CreateTerapeuticPlan({ navigation }) {
     setLoading(true);
     const terapeuticPlan = await fetchChatGPTResponse(prompt)
     setLoading(false);
-    navigation.navigate("TerapeuticPlanResult", { data: terapeuticPlan })
+    const dataString = encodeURIComponent(JSON.stringify(terapeuticPlan));
+    navigation.navigate("TerapeuticPlanResult", { data: dataString })
   };
 
   return (
